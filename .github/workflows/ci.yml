@@ -27,8 +27,8 @@ jobs:
       - name: Build
         run: |
           xcodebuild \
-            -workspace CI-CD Tutorials.xcworkspace \
-            -scheme CI-CD Tutorials \
+            -workspace "CI-CD Tutorials.xcworkspace" \
+            -scheme "CI-CD Tutorials" \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
             clean build
@@ -37,8 +37,8 @@ jobs:
       - name: Run tests
         run: |
           xcodebuild \
-            -workspace CI-CD Tutorials.xcworkspace \
-            -scheme CI-CD Tutorials \
+            -workspace "CI-CD Tutorials.xcworkspace" \
+            -scheme "CI-CD Tutorials" \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
             test
